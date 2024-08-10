@@ -1,0 +1,37 @@
+{
+  "level": "Difficult",
+  "questions": [
+    {
+      "question": "In type 1 diabetes, the pancreas:",
+      "options": ["still makes insulin, but insulin doesn’t do its job as well getting glucose into the body’s cells", "doesn’t make insulin anymore", "makes more glucose than the body can handle", "none of the above"],
+      "answer": "doesn’t make insulin anymore"
+    },
+    {
+      "question": "In type 2 diabetes, the pancreas:",
+      "options": ["still makes insulin, but insulin doesn’t do its job as well getting glucose into the body’s cells", "doesn’t make insulin anymore", "makes more glucose than the body can handle", "none of the above"],
+      "answer": "still makes insulin, but insulin doesn’t do its job as well getting glucose into the body’s cells"
+    },
+    {
+      "question": "Name two ways that type 1 diabetes is treated.",
+      "answer": "Insulin therapy, dietary management"
+    },
+    {
+      "question": "Name two ways that type 2 diabetes is treated.",
+      "answer": "Diet and exercise, oral medications"
+    },
+    {
+      "question": "List three signs of having either type 1 or type 2 diabetes.",
+      "answer": "Increased thirst, frequent urination, fatigue"
+    },
+    {
+      "question": "True or false: Eating a lot of sugar causes diabetes.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "question": "True or false: Diabetes can’t be prevented.",
+      "options": ["True", "False"],
+      "answer": "False"
+    }
+  ]
+}
