@@ -4,8 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert'; // Import for JSON decoding
 import 'package:http/http.dart' as http; // Import for making HTTP requests
-import 'package:flutter_app/pages/settings.dart'; // Import the Settings page
-import 'package:flutter_app/pages/edit_profile.dart'; // Import the EditProfile page
+import 'package:nao/pages/settings.dart'; // Import the Settings page
+import 'package:nao/pages/edit_profile.dart'; // Import the EditProfile page
 import 'package:speech_to_text/speech_to_text.dart'; // Import for speech-to-text
 
 class Connected extends StatefulWidget {
@@ -64,9 +64,9 @@ class _ConnectedState extends State<Connected> {
     setState(() {
       _questions = (jsonResult['questions'] as List<dynamic>)
           .map((q) => {
-                "question": q['question'].toString(),
-                "answer": q['answer'].toString()
-              })
+        "question": q['question'].toString(),
+        "answer": q['answer'].toString()
+      })
           .toList();
       _generatedText = _formatQuestions(_questions);
     });
@@ -94,31 +94,30 @@ class _ConnectedState extends State<Connected> {
   }
 
   Future<void> _askQuestion(Map<String, String> question) async {
-  try {
-    final response = await http.post(
-      Uri.parse('http://172.27.160.1:5000/ask_questions'),
-      headers: {"Content-Type": "application/json"},
-      body: jsonEncode({"question": question['question']}),
-    );
+    try {
+      final response = await http.post(
+        Uri.parse('http://172.27.160.1:5000/ask_questions'),
+        headers: {"Content-Type": "application/json"},
+        body: jsonEncode({"question": question['question']}),
+      );
 
-    if (response.statusCode == 200) {
-      setState(() {
-        _generatedText = question['question']!;
-      });
+      if (response.statusCode == 200) {
+        setState(() {
+          _generatedText = question['question']!;
+        });
 
-      // Introduce a delay to allow NAO to finish asking the question
-      await Future.delayed(Duration(seconds: 10)); // Adjust the delay as needed
+        // Introduce a delay to allow NAO to finish asking the question
+        await Future.delayed(const Duration(seconds: 10)); // Adjust the delay as needed
 
-      // Start listening for the user's response
-      _startListening();
-    } else {
-      _showErrorDialog('Failed to send question to NAO.');
+        // Start listening for the user's response
+        _startListening();
+      } else {
+        _showErrorDialog('Failed to send question to NAO.');
+      }
+    } catch (e) {
+      _showErrorDialog('Connection error: $e');
     }
-  } catch (e) {
-    _showErrorDialog('Connection error: $e');
   }
-}
-
 
   Future<void> _startListening() async {
     bool available = await _speech.initialize();
@@ -155,7 +154,7 @@ class _ConnectedState extends State<Connected> {
 
         // Move to the next question
         int currentIndex =
-            _questions.indexWhere((q) => q['question'] == _generatedText);
+        _questions.indexWhere((q) => q['question'] == _generatedText);
         if (currentIndex < _questions.length - 1) {
           await _askQuestion(_questions[currentIndex + 1]);
         } else {
@@ -192,11 +191,11 @@ class _ConnectedState extends State<Connected> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Error'),
+        title: const Text('Error'),
         content: Text(message),
         actions: <Widget>[
           TextButton(
-            child: Text('OK'),
+            child: const Text('OK'),
             onPressed: () {
               Navigator.of(context).pop();
             },
@@ -241,7 +240,7 @@ class _ConnectedState extends State<Connected> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => EditProfile()),
+                              builder: (context) => const EditProfile()),
                         );
                       },
                     ),
@@ -251,7 +250,7 @@ class _ConnectedState extends State<Connected> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Settings()),
+                          MaterialPageRoute(builder: (context) => const Settings()),
                         );
                       },
                     ),
@@ -261,7 +260,7 @@ class _ConnectedState extends State<Connected> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(30),
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         colors: [Color(0xFFE9CEDB), Color(0xFFE6F7FF)],
                         begin: Alignment.topLeft,
@@ -280,7 +279,7 @@ class _ConnectedState extends State<Connected> {
                             fontSize: 20,
                             height: 1.2,
                             letterSpacing: -0.3,
-                            color: Color(0xFF0F4C7D),
+                            color: const Color(0xFF0F4C7D),
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -316,7 +315,7 @@ class _ConnectedState extends State<Connected> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   decoration: BoxDecoration(
-                    color: Color(0xFFD9D9D9),
+                    color: const Color(0xFFD9D9D9),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: TextField(
@@ -384,7 +383,7 @@ class _ConnectedState extends State<Connected> {
                   borderRadius: BorderRadius.circular(30),
                   child: Container(
                     padding: const EdgeInsets.all(16.0),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         colors: [Color(0xFFE9CEDB), Color(0xFFE6F7FF)],
                         begin: Alignment.topLeft,
@@ -397,7 +396,7 @@ class _ConnectedState extends State<Connected> {
                           _generatedText,
                           style: GoogleFonts.alatsi(
                             fontSize: 18,
-                            color: Color(0xFF0F4C7D),
+                            color: const Color(0xFF0F4C7D),
                           ),
                         ),
                         const SizedBox(height: 20),
@@ -452,7 +451,7 @@ class _ConnectedState extends State<Connected> {
         margin: const EdgeInsets.symmetric(horizontal: 8.0),
         height: 48,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             colors: [Color(0xFFE9CEDB), Color(0xFFE6F7FF)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -477,7 +476,7 @@ class _ConnectedState extends State<Connected> {
               fontSize: 16,
               height: 1.2,
               letterSpacing: -0.3,
-              color: Color(0xFF0F4C7D),
+              color: const Color(0xFF0F4C7D),
             ),
           ),
         ),
