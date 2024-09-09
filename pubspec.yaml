@@ -1,0 +1,66 @@
+name: nao
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.2.1
+  flutter_svg: any
+  sqflite: ^2.3.3+1
+  path: ^1.9.0
+  http: ^1.2.2
+  speech_to_text: ^6.6.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/vectors/arrow_left_1_x2.svg
+    - assets/vectors/ellipse_3_x2.svg
+    - assets/vectors/ellipse_4_x2.svg
+    - assets/vectors/ellipse_2_x2.svg
+    - assets/vectors/vector_10_x2.svg
+    - assets/images/rectangle_11.png
+    - assets/vectors/user_square_x2.svg
+    - assets/vectors/icon_1_x2.svg
+    - assets/vectors/rectangle_12_x2.svg
+    - assets/images/nao_turned_off_1.png
+    - assets/vectors/icon_2_x2.svg
+    - assets/vectors/rectangle_13_x2.svg
+    - assets/vectors/user_square_1_x2.svg
+    - assets/images/aldebaran_robotics_nao_screen_wallpaper_1.jpeg
+    - assets/vectors/frame_26_x2.svg
+    - assets/vectors/frame_23_x2.svg
+    - assets/vectors/frame_211_x2.svg
+    - assets/vectors/frame_241_x2.svg
+    - assets/images/blue_sphere_1_removebg_preview_11.png
+    - assets/images/nao_turned_on_1.png
+    - assets/vectors/frame_21_x2.svg
+    - assets/vectors/frame_24_x2.svg
+    - assets/vectors/ellipse_21_x2.svg
+    - assets/vectors/vector_9_x2.svg
+    - assets/vectors/vector_7_x2.svg
+    - assets/vectors/vector_5_x2.svg
+    - assets/vectors/vector_6_x2.svg
+    - assets/vectors/vector_x2.svg
+    - assets/vectors/arrow_left_x2.svg
+    - assets/vectors/vector_8_x2.svg
+    - assets/vectors/lock_x2.svg
+    - assets/vectors/vector_3_x2.svg
+    - assets/vectors/vector_2_x2.svg
+    - assets/vectors/vector_4_x2.svg
+    - assets/vectors/container_x2.svg
+    - assets/images/background_login.jpg
+    - assets/questions.json

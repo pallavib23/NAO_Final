@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "question": "Le diabète est une maladie qui modifie la façon dont le corps utilise le glucose.",
+      "answer": "Vrai"
+    },
+    {
+      "question": "Faire de l'exercice aide à gérer le diabète parce que cela améliore la santé générale, aide à contrôler le poids, et régule le niveau de sucre dans le sang.",
+      "answer": "Vrai"
+    },
+    {
+      "question": "Vrai ou Faux : Être malade n'affecte pas une personne atteinte de diabète.",
+      "answer": "Faux"
+    },
+    {
+      "question": "Le diabète est une maladie où le corps a du mal à gérer le sucre dans le sang.",
+      "answer": "Vrai"
+    },
+    {
+      "question": "On peut attraper le diabète en touchant quelqu'un qui l'a.",
+      "answer": "Faux"
+    },
+    {
+      "question": "Manger trop de bonbons peut causer le diabète.",
+      "answer": "Vrai"
+    },
+    {
+      "question": "Les personnes atteintes de diabète ne peuvent jamais manger de sucreries.",
+      "answer": "Faux"
+    },
+    {
+      "question": "Le diabète peut être contrôlé avec une alimentation saine et de l'exercice.",
+      "answer": "Vrai"
+    },
+    {
+      "question": "Tous les diabétiques doivent prendre de l'insuline.",
+      "answer": "Faux"
+    },
+    {
+      "question": "Boire beaucoup d'eau peut aider à gérer le diabète.",
+      "answer": "Vrai"
+    },
+    {
+      "question": "Les enfants peuvent avoir du diabète.",
+      "answer": "Vrai"
+    },
+    {
+      "question": "Le diabète peut disparaître si on arrête de manger du sucre.",
+      "answer": "Faux"
+    },
+    {
+      "question": "Il est important de vérifier régulièrement le niveau de sucre dans le sang quand on a du diabète.",
+      "answer": "Vrai"
+    }
+  ]
+}
